@@ -57,14 +57,13 @@ for char in firstColumn:
         temp += 1
     else:
         print(Fore.LIGHTRED_EX + char + Fore.RED + ' is not a valid first character.')
-        exit
 if temp == 5:
     print(Fore.GREEN + 'All values entered are possible first characters.' + Fore.RESET)
     temp = 0
 else:
     print(Fore.RED + 'There is an incorrect number of characters entered.' + Fore.RESET)
     temp = 0
-    sys.exit()
+    #sys.exit()
 
 # Input and checks for the secondColumn
 secondColumn = raw_input('Please enter the characters for the second column: ' + Fore.YELLOW)
@@ -74,14 +73,13 @@ for char in secondColumn:
         temp += 1
     else:
         print(Fore.LIGHTRED_EX + char + Fore.RED + ' is not a valid second character.')
-        exit
 if temp == 5:
     print(Fore.GREEN + 'All values entered are possible second characters.' + Fore.RESET)
     temp = 0
 else:
     print(Fore.RED + 'There is an incorrect number of characters entered.' + Fore.RESET)
     temp = 0
-    sys.exit()
+    #sys.exit()
 
 # Input and checks for the thirdColumn
 thirdColumn = raw_input('Please enter the characters for the third column: ' + Fore.YELLOW)
@@ -91,14 +89,13 @@ for char in thirdColumn:
         temp += 1
     else:
         print(Fore.LIGHTRED_EX + char + Fore.RED + ' is not a valid third character.')
-        exit
 if temp == 5:
     print(Fore.GREEN + 'All values entered are possible third characters.' + Fore.RESET)
     temp = 0
 else:
     print(Fore.RED + 'There is an incorrect number of characters entered.' + Fore.RESET)
     temp = 0
-    sys.exit()
+    #sys.exit()
 
 # Input and checks for the fourthColumn
 fourthColumn = raw_input('Please enter the characters for the fourth column: ' + Fore.YELLOW)
@@ -108,14 +105,13 @@ for char in fourthColumn:
         temp += 1
     else:
         print(Fore.LIGHTRED_EX + char + Fore.RED + ' is not a valid fourth character.')
-        exit
 if temp == 5:
     print(Fore.GREEN + 'All values entered are possible fourth characters.' + Fore.RESET)
     temp = 0
 else:
     print(Fore.RED + 'There is an incorrect number of characters entered.' + Fore.RESET)
     temp = 0
-    sys.exit()
+    #sys.exit()
 
 # Input and checks for the fifthColumn
 fifthColumn = raw_input('Please enter the characters for the fifth column: ' + Fore.YELLOW)
@@ -125,14 +121,13 @@ for char in fifthColumn:
         temp += 1
     else:
         print(Fore.LIGHTRED_EX + char + Fore.RED + ' is not a valid fifth character.')
-        exit
 if temp == 5:
     print(Fore.GREEN + 'All values entered are possible fifth characters.' + Fore.RESET)
     temp = 0
 else:
     print(Fore.RED + 'There is an incorrect number of characters entered.' + Fore.RESET)
     temp = 0
-    sys.exit()
+    #sys.exit()
 
 print(Fore.LIGHTGREEN_EX + 'All of these characters are correct, and will result in a correct word.' + Fore.RESET)
 
@@ -147,69 +142,113 @@ print('.')
 
 # Removes words starting in "a"; if "a" is not in firstColumn
 if 'a' in firstColumn:
-    firstPossible.append('about')
-    firstPossible.append('after')
-    firstPossible.append('again')
+    if 'b' in secondColumn:
+        firstPossible.append('about')
+    if 'f' in secondColumn:
+        firstPossible.append('after')
+    if 'g' in secondColumn:
+        firstPossible.append('again')
 # Removes words starting in "b"; if "b" is not in firstColumn
 if 'b' in firstColumn:
-    firstPossible.append('below')
+    if 'e' in secondColumn:
+        firstPossible.append('below')
 # Removes words starting in "c"; if "c" is not in firstColumn
 if 'c' in firstColumn:
-    firstPossible.append('could')
+    if 'o' in secondColumn:
+        firstPossible.append('could')
 # Removes words starting in "e"; if "e" is not in firstColumn
 if 'e' in firstColumn:
-    firstPossible.append('every')
+    if 'v' in secondColumn:
+        firstPossible.append('every')
 # Removes words starting in "f"; if "f" is not in firstColumn
 if 'f' in firstColumn:
-    firstPossible.append('first')
-    firstPossible.append('found')
+    if 'i' in secondColumn:
+        firstPossible.append('first')
+    if 'o' in secondColumn:
+        firstPossible.append('found')
 # Removes words starting in "g"; if "g" is not in firstColumn
 if 'g' in firstColumn:
-    firstPossible.append('great')
+    if 'r' in secondColumn:
+        firstPossible.append('great')
 # Removes words starting in "h"; if "h" is not in firstColumn
 if 'h' in firstColumn:
-    firstPossible.append('house')
+    if 'o' in secondColumn:
+        firstPossible.append('house')
 # Removes words starting in "l"; if "l" is not in firstColumn
 if 'l' in firstColumn:
-    firstPossible.append('large')
-    firstPossible.append('learn')
+    if 'a' in secondColumn:
+        firstPossible.append('large')
+    if 'e' in secondColumn:
+        firstPossible.append('learn')
 # Removes words starting in "n"; if "n" is not in firstColumn
 if 'n' in firstColumn:
-    firstPossible.append('never')
+    if 'e' in secondColumn:
+        firstPossible.append('never')
 # Removes words starting in "o"; if "o" is not in firstColumn
 if 'o' in firstColumn:
-    firstPossible.append('other')
+    if 't' in secondColumn:
+        firstPossible.append('other')
 # Removes words starting in "p"; if "p" is not in firstColumn
 if 'p' in firstColumn:
-    firstPossible.append('place')
-    firstPossible.append('plant')
-    firstPossible.append('point')
+    if 'l' in secondColumn:
+        if 'a' in thirdColumn:
+            if 'c' in fourthColumn:
+                firstPossible.append('place')
+            if 'n' in fourthColumn:
+                firstPossible.append('plant')
+    if 'o' in secondColumn:
+        firstPossible.append('point')
 # Removes words starting in "r"; if "r" is not in firstColumn
 if 'r' in firstColumn:
-    firstPossible.append('right')
+    if 'i' in secondColumn:
+        firstPossible.append('right')
 # Removes words starting in "s"; if "s" is not in firstColumn
 if 's' in firstColumn:
-    firstPossible.append('small')
-    firstPossible.append('sound')
-    firstPossible.append('spell')
-    firstPossible.append('still')
-    firstPossible.append('study')
+    if 'm' in secondColumn:
+        firstPossible.append('small')
+    if 'o' in secondColumn:
+        firstPossible.append('sound')
+    if 'p' in secondColumn:
+        firstPossible.append('spell')
+    if 't' in secondColumn:
+        if 'i' in thirdColumn:
+            firstPossible.append('still')
+        if 'u' in thirdColumn:
+            firstPossible.append('study')
 # Removes words starting in "t"; if "t" is not in firstColumn
 if 't' in firstColumn:
-    firstPossible.append('their')
-    firstPossible.append('there')
-    firstPossible.append('these')
-    firstPossible.append('thing')
-    firstPossible.append('think')
-    firstPossible.append('three')
+    if 'h' in secondColumn:
+        if 'e' in thirdColumn:
+            if 'i' in fourthColumn:
+                firstPossible.append('their')
+            if 'r' in fourthColumn:
+                firstPossible.append('there')
+            if 's' in fourthColumn:
+                firstPossible.append('these')
+        if 'i' in thirdColumn:
+            if 'n' in fourthColumn:
+                if 'g' in fifthColumn:
+                    firstPossible.append('thing')
+                if 'k' in fifthColumn:
+                    firstPossible.append('think')
+        if 'r' in thirdColumn:
+            firstPossible.append('three')
 # Removes words starting in "w"; if "w" is not in firstColumn
 if 'w' in firstColumn:
-    firstPossible.append('water')
-    firstPossible.append('where')
-    firstPossible.append('which')
-    firstPossible.append('world')
-    firstPossible.append('would')
-    firstPossible.append('write')
+    if 'a' in secondColumn:
+        firstPossible.append('water')
+    if 'h' in secondColumn:
+        if 'e' in thirdColumn:
+            firstPossible.append('where')
+        if 'i' in thirdColumn:
+            firstPossible.append('which')
+    if 'o' in secondColumn:
+        if 'r' in thirdColumn:
+            firstPossible.append('world')
+        if 'u' in thirdColumn:
+            firstPossible.append('would')
+    if 'r' in secondColumn:
+        firstPossible.append('write')
 
 # Prints all of the possible words based on the firstColumn test
 print(firstPossible)
